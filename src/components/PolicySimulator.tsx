@@ -20,25 +20,68 @@ const PolicySimulator = () => {
 
   const results = [
     {
-      category: "Public Reception",
-      score: 78,
-      sentiment: "Positive",
+      category: "GDP Impact",
+      score: 82,
+      sentiment: "Positive Growth",
       icon: TrendingUp,
-      color: "text-accent"
+      color: "text-accent",
+      detail: "Projected 0.8% increase in GDP over 3 years"
     },
     {
-      category: "Implementation Risk",
-      score: 35,
-      sentiment: "Low",
+      category: "Employment Generation",
+      score: 67,
+      sentiment: "Good Potential",
       icon: CheckCircle,
-      color: "text-accent"
+      color: "text-accent",
+      detail: "Expected to create 2.3 million direct jobs"
+    },
+    {
+      category: "Rural Impact",
+      score: 75,
+      sentiment: "High Positive",
+      icon: TrendingUp,
+      color: "text-secondary",
+      detail: "Benefits 150+ million rural households"
+    },
+    {
+      category: "Implementation Cost",
+      score: 45,
+      sentiment: "Moderate",
+      icon: AlertTriangle,
+      color: "text-secondary",
+      detail: "₹85,000 crores over 5 years"
+    },
+    {
+      category: "Public Support",
+      score: 78,
+      sentiment: "Strong",
+      icon: CheckCircle,
+      color: "text-accent",
+      detail: "72% approval in preliminary surveys"
+    },
+    {
+      category: "Social Equity",
+      score: 71,
+      sentiment: "Positive",
+      icon: TrendingUp,
+      color: "text-accent",
+      detail: "Reduces income inequality by 12%"
     },
     {
       category: "Misinformation Risk",
-      score: 42,
-      sentiment: "Medium",
+      score: 38,
+      sentiment: "Manageable",
       icon: AlertTriangle,
-      color: "text-secondary"
+      color: "text-secondary",
+      detail: "Medium risk in 8 states, mitigation needed"
+    },
+    {
+      category: "Regional Disparities",
+      score: 52,
+      sentiment: "Needs Attention",
+      icon: AlertTriangle,
+      color: "text-secondary",
+      detail: "Northern states may lag in implementation"
     }
   ];
 
@@ -50,10 +93,10 @@ const PolicySimulator = () => {
             Policy Analysis
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Simulate Policy Impact
+            Simulate Policy Impact in India
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Enter a policy proposal to predict community responses and identify potential challenges
+            Analyze economic, social, and regional impacts of policy proposals across Indian states
           </p>
         </div>
 
@@ -68,7 +111,7 @@ const PolicySimulator = () => {
             </div>
             
             <Textarea
-              placeholder="Enter your policy proposal here... For example: 'New infrastructure development plan for urban transportation...'"
+              placeholder="Enter your policy proposal here... For example: 'Expand PM-KISAN to include tenant farmers and provide ₹8,000 per year...'"
               className="min-h-[200px] mb-4 resize-none"
               value={policyText}
               onChange={(e) => setPolicyText(e.target.value)}
@@ -94,9 +137,9 @@ const PolicySimulator = () => {
           </Card>
 
           {/* Results Section */}
-          <Card className="p-6 border-border shadow-soft">
+          <Card className="p-6 border-border shadow-soft overflow-hidden">
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Predicted Outcomes
+              Predicted Outcomes Across India
             </h3>
 
             {!showResults ? (
@@ -107,7 +150,7 @@ const PolicySimulator = () => {
                 </div>
               </div>
             ) : (
-              <div className="space-y-4">
+              <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
                 {results.map((result, index) => {
                   const Icon = result.icon;
                   return (
@@ -124,9 +167,10 @@ const PolicySimulator = () => {
                           {result.sentiment}
                         </Badge>
                       </div>
+                      <p className="text-xs text-muted-foreground mb-3">{result.detail}</p>
                       <div className="space-y-2">
                         <div className="flex items-center justify-between text-sm text-muted-foreground">
-                          <span>Score</span>
+                          <span>Impact Score</span>
                           <span className="font-semibold text-foreground">{result.score}%</span>
                         </div>
                         <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
@@ -140,11 +184,15 @@ const PolicySimulator = () => {
                   );
                 })}
 
-                <div className="mt-6 p-4 bg-accent/5 border border-accent/20 rounded-lg">
-                  <p className="text-sm text-foreground">
-                    <strong>AI Recommendation:</strong> This policy shows positive public reception with manageable risks. 
-                    Consider addressing medium-level misinformation concerns through targeted communication campaigns.
+                <div className="mt-6 p-5 bg-gradient-to-r from-accent/5 to-secondary/5 border border-accent/20 rounded-lg">
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong className="text-accent">📊 AI Analysis Summary:</strong> This policy demonstrates strong potential for economic growth with positive GDP impact (+0.8%) and substantial employment generation (2.3M jobs). Rural impact is particularly strong, benefiting 150M+ households. Key considerations include managing implementation costs (₹85K crores) and addressing regional disparities in northern states. Misinformation risk is manageable with targeted communication strategies. Overall public support is strong at 72% approval.
                   </p>
+                  <div className="mt-4 pt-4 border-t border-accent/20">
+                    <p className="text-xs text-muted-foreground">
+                      <strong>Recommendation:</strong> Proceed with phased rollout starting in high-readiness states. Establish dedicated communication cells in high-risk regions. Monitor implementation monthly with real-time dashboards.
+                    </p>
+                  </div>
                 </div>
               </div>
             )}
