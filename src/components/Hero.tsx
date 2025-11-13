@@ -29,16 +29,16 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight animate-fade-in-up">
-            Bridging Communication
+            AI-Powered Governance
             <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mt-2">
-              Across Every Community
+              for Bharat
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
-            An intelligent AI system that helps governments and organizations communicate clearly with diverse citizens, 
-            predict policy impacts, and make informed decisions with privacy and trust at its core.
+            Bridge communication across India's diverse states and languages, predict policy impacts across regions, 
+            and empower data-driven decision-making for 1.4 billion citizens with AI-powered insights.
           </p>
 
           {/* Feature Pills */}
@@ -78,16 +78,16 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 animate-fade-in-up animation-delay-500">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary">150+</div>
-              <div className="text-sm text-muted-foreground mt-1">Languages</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">22+</div>
+              <div className="text-sm text-muted-foreground mt-1">Official Languages</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary">95%</div>
-              <div className="text-sm text-muted-foreground mt-1">Accuracy</div>
+              <div className="text-3xl md:text-4xl font-bold text-secondary">28</div>
+              <div className="text-sm text-muted-foreground mt-1">States & 8 UTs</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent">24/7</div>
-              <div className="text-sm text-muted-foreground mt-1">Available</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent">1.4B</div>
+              <div className="text-sm text-muted-foreground mt-1">Citizens</div>
             </div>
           </div>
         </div>
