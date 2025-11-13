@@ -71,3 +71,25 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+
+
+Rebuild the entire policy simulation framework from scratch with a focus on policymaker usability and real-world impact visualization. The goal is to provide policymakers—who often have limited technical understanding—with an intuitive, efficient, and highly informative tool to grasp the practical outcomes of any newly introduced policy, especially those targeting specific demographic groups.
+
+Key requirements:
+
+When a policy is introduced (e.g., a new education policy), simulate and clearly show its multi-dimensional impacts on the target demographic and the broader local economy.
+
+Move beyond dry percentages and raw data metrics. Instead, transform outcomes into easily digestible, meaningful narratives and visualizations that highlight who benefits the most, how different sectors of the economy respond, and any spillover effects on related populations or systems.
+
+Use story-driven explanations, user-centric dashboards, or graphical summaries that succinctly display complex cause-effect chains resulting from the policy intervention.
+
+Ensure the simulation highlights positive outcomes (like improved earnings, education levels, or job creation) and potential unintended consequences or trade-offs intuitively.
+
+Optimize for speed and simplicity without sacrificing depth of information to support quick decision-making.
+
+Provide actionable insights that policymakers can use to communicate policy efficacy plainly to stakeholders and constituents.
+
+Include capabilities to contrast multiple policy scenarios or demographic subsets to facilitate comparative analysis and policy refinement.
+
+By focusing on these dimensions, the simulation tool will empower policymakers to make data-driven, yet simple-to-understand decisions, ultimately improving policy design and implementation with clearer visibility into real-world social and economic outcomes.
